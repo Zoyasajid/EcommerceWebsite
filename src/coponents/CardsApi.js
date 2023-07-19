@@ -10,7 +10,8 @@ function CardsApi() {
      let t =await fetch(API_URL)
      let data= await t.json();
      setData(data)
-     console.log(setData)}
+    //  console.log(setData)
+    }
 
      return <div className="section-center">
      {Data.map((item)=>{
