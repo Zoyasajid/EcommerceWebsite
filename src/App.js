@@ -1,21 +1,44 @@
 import './App.css';
+// import Detail from './Pages/Detail';
 import CardsApi from './coponents/CardsApi';
+import DetailPage from './coponents/DetailPage';
+// import CardsApi from './coponents/CardsApi';
 import Navbar from './coponents/Navbar';
-import {Routes,Route} from 'react-router-dom'
-import Product from './coponents/Product';
 
+import {Routes,Route,BrowserRouter,Link} from 'react-router-dom'
+// import Product from './coponents/Product';
+// import {   
+//   createBrowserRouter,
+//   RouterProvider,
+// } from "react-router-dom";
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <Navbar/>,
+//   },
+//   {
+//     path: "/detailpage",
+//     element: <Detail/>,
+//   },
+// ]);
 function App() {
   return (
     <div className="heading">
-            <Navbar/>
-
+      <BrowserRouter>
+      {/* <Link to="/product">CardsApi</Link> */}
       <Routes>
-        <Route path="/" element={<CardsApi/>}/>
-        <Route path="/product/id" element={<Product/>}/>
+
+        <Route path='/' element={<Navbar/>}/>
+        <Route path='/product' element={<CardsApi/>}/>
+        {/* <Route path='/product/:id' element={<DetailPage/>}/> */}
+        <Route path="/product/:id" element={<DetailPage/>}/>
+
       </Routes>
-      <div className='App'>
-              <h2>DEALS OF THE DAY</h2>
-    </div>     <CardsApi/>
+      </BrowserRouter>
+            {/* <Navbar/> */}
+{/* <CardsApi/> */}
+{/* <RouterProvider router={router} /> */}
+
     </div>
   );
 }
