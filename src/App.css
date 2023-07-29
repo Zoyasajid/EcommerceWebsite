@@ -21,7 +21,7 @@ html {
 body {
   min-height: 100vh;
   display: grid;
-  place-items: center;
+  /* place-items: center; */
 }
 /* .btn-containe} */
 .navbar{
@@ -37,6 +37,8 @@ border-bottom: 3px solid rgb(232, 232, 232);
 .btn{
   margin-right: 30px;
   /* background-color: rgb(42, 184, 231); */
+  background-color: rgb(84, 84, 213);
+
   border: none;
   height: 40px;
   margin-top: 30px;
@@ -95,6 +97,7 @@ justify-content: space-between;
 
  .Card-container{
   flex: 1 0 21%;
+  text-decoration: none;
   margin: 30px;
 
   border: 1px solid rgb(181, 177, 177);
@@ -252,13 +255,35 @@ hr{
   width: 95%;
   text-align: start;
 }
-button{
-  background-color: rgb(9, 9, 220);
-width: 14%;
-height: 60px;
-margin-right: -530px;
-margin-top: 29px;
+
+.cart{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 23px;
+  background-color: rgb(85, 85, 103);
+  /* justify-content: space-between; */
+  color: black;
+  }
+
+.detailbtn {
+  width: 29%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: -133px;
 }
+.detailbtn {
+  width: 52%;
+  background-color: rgb(23, 27, 26);
+} 
+.cart-div{
+    background-color: seashell;
+    margin: 5px;
+  }
 
 @media (max-width:700px) {
 
@@ -276,6 +301,9 @@ margin-top: 29px;
     height: 6vh;
     margin-bottom:20px ;
     font-weight: 500;
+}
+.btn2{
+  display: none;
 }
 .shoe{
   margin-left: 20px;

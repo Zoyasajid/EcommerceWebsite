@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {Link }from 'react-router-dom'
 import Navbar from "./Navbar";
+// import Cart from "./Cart";
 // import Navbar from "./Navbar";
 function CardsApi() {
   const API_URL = "https://fakestoreapi.com/products";
@@ -35,16 +36,11 @@ const handleCategory = async (category) => {
   setProduct(filterProduct)
 }
 
-// console.log(product)
-// useEffect(() => {
-//    handleCategory()  
-// }, [category])
 
   return (
     <div>
 <Navbar/>
       <>
-      {/* <button className="btn set" onClick={handleAll}>All</button> */}
         {categories.map((category=>{
           return  <button className='btn set' onClick={()=>handleCategory(category)}>{category}</button>
         }))}
@@ -57,12 +53,10 @@ const handleCategory = async (category) => {
       <div className="section-center">
       {product?.map((item) => {
        
-            const { id, title, image, description, price } = item;
-            // console.log(item.id)
-          
-          
+            const { title, image, description, price } = item;          
           return (
-            
+              
+              
             <div className="Card-container" >
                       <Link to={`/product/${item.id}`}>
               <article className="menu-item" key={item.id}>

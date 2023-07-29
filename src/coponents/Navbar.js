@@ -3,17 +3,18 @@ import logo from './pic/logo-removebg-preview-new.png'
 import {Link} from 'react-router-dom'
 
 function Navbar() {
+  function handleclick(){
+    alert("Your Already Login")
+  }
   return (
-    <Link to='/'>
       <div className='navbar'>
  <img className="shoe" src={logo} alt="logo" />
         <div className='btn-container'>
-            <Link to="/product"><button className='btn btn1'>Login</button></Link>
+          <button className='btn btn1' onClick={handleclick}>Login</button>
             <button className='btn btn2'>Signup</button>
-
+<Link to="/product/cart"><button className='btn' >Cart</button></Link>
         </div>
     </div>
-     </Link>
   )
 }
 
