@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import "./Login.css";
 function Loginpage() {
@@ -22,19 +22,19 @@ function Loginpage() {
       .then((res) => res.json())
       .then((data) => console.log(data))
       .then((data) => {
-        const user = JSON.parse(localStorage.getItem("user"));
+        // const user = JSON.parse(localStorage.getItem("user"));
         if (user) {
           console.log(user);
           // setToken(data.token)
           navigate("/product");
         } else {
-          alert("token not found");
+          console.log("token not found");
         }
       })
 
-      .catch((error) => {
-        console.log("eroor fetching api", error);
-      });
+      // .catch((error) => {
+      //   console.log("eroor fetching api", error);
+      // });
   };
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -63,8 +63,6 @@ function Loginpage() {
           onChange={handleInputChange}
           value={user.state}
         />
-        <Link to="/product"> 
-        {/* delete it later */}
         <button
           className="bttn"
           onClick={() => {
@@ -74,7 +72,6 @@ function Loginpage() {
         >
           log in
         </button>
-        </Link>
       </div>
     </div>
   );

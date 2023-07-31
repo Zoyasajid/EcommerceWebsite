@@ -31,7 +31,7 @@ function CardsApi() {
   }
 
 const handleCategory = async (category) => {
-  const responcecategory = await fetch(`https://fakestoreapi.com/products/category/${category}`);
+   const responcecategory = await fetch(`https://fakestoreapi.com/products/category/${category}`);
   const filterProduct = await responcecategory.json()
   setProduct(filterProduct)
 }
@@ -74,7 +74,6 @@ const handleCategory = async (category) => {
                 </div>
               </article>
 
-              {/* <CardsApi key={product.id} product={product} /> */}
         </Link>
             </div>
           )

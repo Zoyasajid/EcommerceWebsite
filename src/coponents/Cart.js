@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./Cart.css";
 function Cart() {
   const [carts, setCarts] = useState([]);
@@ -88,7 +88,7 @@ function Cart() {
                         }
                       >
                         -
-                      </button>{" "}
+                      </button>
                       <span>{item.quantity}</span>
                       <button onClick={() => setItemQuantity(item.quantity++)}>
                         +
