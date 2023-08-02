@@ -31,10 +31,6 @@ function Loginpage() {
           console.log("token not found");
         }
       })
-
-      // .catch((error) => {
-      //   console.log("eroor fetching api", error);
-      // });
   };
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -46,7 +42,7 @@ function Loginpage() {
   return (
     <div className="login-container">
       <div className="login-form">
-        <h2 className="title">Log in</h2>
+        <h2 className="title">LOGIN </h2>
         <h5 className="form-group">Username:</h5>
         <input
           className="input"

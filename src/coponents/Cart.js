@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { Link } from "react-router-dom";
+import {GiCancel} from "react-icons/gi"
 import "./Cart.css";
 function Cart() {
   const [carts, setCarts] = useState([]);
@@ -69,7 +70,8 @@ function Cart() {
                       className="cancel"
                       onClick={() => handlecancelbtn(item.id)}
                     >
-<FontAwesomeIcon icon="fa-solid fa-xmark" className="cancel"/>✖</p>
+{/* <FontAwesomeIcon icon="fa-solid fa-xmark" className="cancel"/>✖</p> */}
+<GiCancel className="cancel"/></p>
                   </div>
                   <p className="cart-title">{item.title}</p>
                   <div className="quan-save">
