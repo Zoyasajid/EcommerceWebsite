@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./Login.css";
 function Loginpage() {
   const [user, setUser] = useState({ username: "", password: "" });
+  const [error,setError]=useState()
   const navigate = useNavigate();
   useEffect(() => {
     localStorage.setItem("user", JSON.stringify(user));
@@ -25,11 +26,10 @@ function Loginpage() {
         // const user = JSON.parse(localStorage.getItem("user"));
         if (user) {
           console.log(user);
-          // setToken(data.token)
           navigate("/product");
-        } else {
-          console.log("token not found");
-        }
+        } 
+      }).catch((err)=>{
+        setError("Something is wrong")
       })
   };
   const handleInputChange = (event) => {
@@ -58,15 +58,14 @@ function Loginpage() {
           type="password"
           onChange={handleInputChange}
           value={user.state}
-        />
-        <button
+        /> <p className="errormsg">{error}</p>
+                <button
           className="bttn"
           onClick={() => {
             
             handleApi();
           }}
-        >
-          log in
+        >LOGIN
         </button>
       </div>
     </div>
